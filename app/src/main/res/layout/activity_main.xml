@@ -49,33 +49,6 @@
         app:srcCompat="@drawable/reddice1" />
 
     <TextView
-        android:id="@+id/greenresulttextView"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/resulttextView"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/yellowresulttextView"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="336dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/answerstatus"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
