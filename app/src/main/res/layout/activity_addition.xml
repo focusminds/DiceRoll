@@ -10,6 +10,7 @@
         android:id="@+id/MainMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FFFFFF"
         tools:context=".MainActivity"
         tools:layout_editor_absoluteX="45dp"
         tools:layout_editor_absoluteY="-29dp">
@@ -17,14 +18,12 @@
         <Button
             android:id="@+id/rollbutton"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:background="#864CAF50"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/eachrolldice"
             android:cursorVisible="true"
-            android:text="Roll"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/endgame"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/redimageView" />
 
@@ -75,27 +74,31 @@
         <Button
             android:id="@+id/checkanwer"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
-            android:background="#864CAF50"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/correct"
             android:cursorVisible="true"
             android:onClick="addnumber"
-            android:text="Check Answer"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/endgame"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/redimageView" />
 
         <EditText
             android:id="@+id/signedresultnumber"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
             android:layout_marginTop="100dp"
+            android:layout_marginEnd="100dp"
+            android:backgroundTint="#272525"
             android:ems="10"
+            android:enabled="false"
             android:hint="Enter Answer"
             android:inputType="numberSigned"
             android:textAlignment="center"
+            android:textColor="#2E5FC1"
+            android:textColorHint="#A59B9B"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -106,7 +109,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:textColor="#0C45D6"
+            android:textColor="#131313"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -115,28 +118,39 @@
 
         <Button
             android:id="@+id/endgame"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="#864CAF50"
+            android:layout_width="130dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/done"
             android:cursorVisible="true"
-            android:enabled="false"
-            android:text="End Game"
+            android:enabled="true"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.517"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkanwer" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <RatingBar
             android:id="@+id/ratingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#7A7070"
+            android:isIndicator="true"
+            android:progressBackgroundTint="#656161"
+            android:progressTint="#DAA520"
             android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/answerstatus"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/signedresultnumber" />
+
+        <ImageView
+            android:id="@+id/imageaction"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/plus" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

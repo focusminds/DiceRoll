@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".InstructionActivty">
+
+    <ImageView
+        android:id="@+id/Gdice"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/greendice1" />
+
+    <ImageView
+        android:id="@+id/Rdice"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Gdice"
+        app:srcCompat="@drawable/reddice1" />
+
+    <ImageView
+        android:id="@+id/Ydice"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Rdice"
+        app:srcCompat="@drawable/yellowdice1" />
+
+    <TextView
+        android:id="@+id/GText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Positive Dice"
+        android:textColor="#35A6E8"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Gdice"
+        app:layout_constraintStart_toEndOf="@+id/Gdice"
+        app:layout_constraintTop_toTopOf="@+id/Gdice" />
+
+    <TextView
+        android:id="@+id/Rtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Positive Dice"
+        android:textColor="#35A6E8"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Rdice"
+        app:layout_constraintStart_toEndOf="@+id/Rdice"
+        app:layout_constraintTop_toTopOf="@+id/Rdice" />
+
+    <TextView
+        android:id="@+id/Ytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Negative Dice"
+        android:textColor="#35A6E8"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Ydice"
+        app:layout_constraintStart_toEndOf="@+id/Ydice"
+        app:layout_constraintTop_toTopOf="@+id/Ydice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,17 +3,20 @@ package com.example.diceroll;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
     Button bAddition;
-    Button bSbtraction;
+    Button bSbtraction,bInstruction,bAbout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         bAddition = findViewById(R.id.addition);
         bSbtraction = findViewById(R.id.subtraction);
+        bInstruction = findViewById(R.id.instruction);
 
         bAddition.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent iAdditionIntent = new Intent(MainActivity.this,AdditionActivity.class);
                 iAdditionIntent.putExtra("Action","Addition");
                 startActivity(iAdditionIntent);
+
+
             }
         });
 
@@ -37,6 +43,26 @@ public class MainActivity extends AppCompatActivity {
                 Intent iSubtractionIntent = new Intent(MainActivity.this,AdditionActivity.class);
                 iSubtractionIntent.putExtra("Action","Subtraction");
                 startActivity(iSubtractionIntent);
+
+
+            }
+        });
+
+        bInstruction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iInstructionIntent = new Intent(MainActivity.this,InstructionActivty.class);
+                startActivity(iInstructionIntent);
+
+            }
+        });
+
+        bAbout = findViewById(R.id.about);
+        bAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iAbout = new Intent(MainActivity.this,AboutActivity.class);
+                startActivity(iAbout);
             }
         });
     }

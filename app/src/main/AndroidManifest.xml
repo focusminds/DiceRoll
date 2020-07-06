@@ -9,8 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdditionActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".AboutActivity" android:parentActivityName=".MainActivity"
+            android:label="About"></activity>
+        <activity
+            android:name=".InstructionActivty"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.Noactionbar" />
+        <activity
+            android:name=".AdditionActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".LogoScreen"
+            android:theme="@style/AppTheme.Noactionbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

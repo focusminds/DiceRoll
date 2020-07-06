@@ -14,9 +14,9 @@ import android.widget.TextView;
 
 public class AdditionActivity extends AppCompatActivity {
 
-    Button bRollButton,bCheckAnswer,bEndGame ;
+    Button bRollButton,bCheckAnswer,bEndGame,bBack ;
     TextView tTextView1,tGreenTextView,tYellowTextView,tAnsTextView,tNumberofQuestions;
-    ImageView iRedDice,iGreenDice,iYellowDice;
+    ImageView iRedDice,iGreenDice,iYellowDice,imAction;
     EditText eResultNumber;
     RatingBar rtScoreBar;
     double iReddicenumber =0;
@@ -27,7 +27,7 @@ public class AdditionActivity extends AppCompatActivity {
     String sAction = "";
     String sLabel = "";
 
-    int iQ = 1;
+    int iQ = 0;
     int iCorrect = 0;
     String siQ = "";
 
@@ -40,10 +40,16 @@ public class AdditionActivity extends AppCompatActivity {
         setTitle(sLabel);
         setContentView(R.layout.activity_addition);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         bRollButton = findViewById(R.id.rollbutton);
         bCheckAnswer = findViewById(R.id.checkanwer);
         bEndGame =  findViewById(R.id.endgame);
-        bCheckAnswer.setEnabled(false);
+        //bBack = findViewById(R.id.back);
+        bCheckAnswer.setVisibility(View.INVISIBLE);
+       // bBack.setVisibility(View.INVISIBLE);
+        bEndGame.setVisibility(View.INVISIBLE);
+
         // tTextView1 = findViewById(R.id.resulttextView);
         //tGreenTextView = findViewById(R.id.greenresulttextView);
         //tYellowTextView = findViewById(R.id.yellowresulttextView);
@@ -54,6 +60,13 @@ public class AdditionActivity extends AppCompatActivity {
         iYellowDice = findViewById(R.id.yellowimageView);
         eResultNumber = findViewById(R.id.signedresultnumber);
         rtScoreBar = findViewById(R.id.ratingBar);
+        imAction = findViewById(R.id.imageaction);
+
+        if(sLabel.equals("Addition")) {
+            imAction.setImageResource(R.drawable.plus);
+        } else {
+            imAction.setImageResource(R.drawable.minus1);
+        }
 
         bRollButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,31 +82,28 @@ public class AdditionActivity extends AppCompatActivity {
                 endgame();
             }
         });
+
     }
 
     private void endgame() {
 
         float d = (Float.valueOf(iCorrect) / Float.valueOf(iQ))* 100 ;
-        if(d>75) {
-            d = 5;
-        } else if(d>50 && d<75) {
-            d=3;
-        } else if(d>25 && d<50) {
-            d=2;
-        } else if(d>0 && d<25) {
-            d=1;
-        }
+        d /= 20;
         rtScoreBar.setRating(d);
-        bRollButton.setEnabled(false);
+        bRollButton.setVisibility(View.INVISIBLE);
+        tAnsTextView.setVisibility(View.INVISIBLE);
+        bEndGame.setVisibility(View.INVISIBLE);
         rtScoreBar.setVisibility(View.VISIBLE);
+        //bBack.setVisibility(View.VISIBLE);
 
     }
 
     private void roll() {
         eResultNumber.setEnabled(true);
-        bEndGame.setEnabled(false);
+        bEndGame.setVisibility(View.INVISIBLE);
         tAnsTextView.setText("");
         eResultNumber.setText("");
+        iQ++;
         siQ = String.valueOf(iQ);
         tNumberofQuestions.setText(siQ);
 
@@ -135,6 +145,24 @@ public class AdditionActivity extends AppCompatActivity {
                 iReddicenumber =6;
                 //Toast.makeText(getApplicationContext(),"6",Toast.LENGTH_SHORT).show();
                 break;
+            case 7:
+                //tTextView1.setText("6");
+                iRedDice.setImageResource(R.drawable.reddice7);
+                iReddicenumber =7;
+                //Toast.makeText(getApplicationContext(),"6",Toast.LENGTH_SHORT).show();
+                break;
+            case 8:
+                //tTextView1.setText("6");
+                iRedDice.setImageResource(R.drawable.reddice8);
+                iReddicenumber =8;
+                //Toast.makeText(getApplicationContext(),"6",Toast.LENGTH_SHORT).show();
+                break;
+            case 9:
+                //tTextView1.setText("6");
+                iRedDice.setImageResource(R.drawable.reddice9);
+                iReddicenumber =9;
+                //Toast.makeText(getApplicationContext(),"6",Toast.LENGTH_SHORT).show();
+                break;
         }
 
         int greennumber = (int)(Math.random() * 6 + 1);
@@ -173,6 +201,24 @@ public class AdditionActivity extends AppCompatActivity {
                 //tGreenTextView.setText("6");
                 iGreenDice.setImageResource(R.drawable.greendice6);
                 iGreendicenumber=6;
+                //Toast.makeText(getApplicationContext(),"6",Toast.LENGTH_SHORT).show();
+                break;
+            case 7:
+                //tGreenTextView.setText("6");
+                iGreenDice.setImageResource(R.drawable.greendice7);
+                iGreendicenumber=7;
+                //Toast.makeText(getApplicationContext(),"6",Toast.LENGTH_SHORT).show();
+                break;
+            case 8:
+                //tGreenTextView.setText("6");
+                iGreenDice.setImageResource(R.drawable.greendice8);
+                iGreendicenumber=8;
+                //Toast.makeText(getApplicationContext(),"6",Toast.LENGTH_SHORT).show();
+                break;
+            case 9:
+                //tGreenTextView.setText("6");
+                iGreenDice.setImageResource(R.drawable.greendice9);
+                iGreendicenumber=9;
                 //Toast.makeText(getApplicationContext(),"6",Toast.LENGTH_SHORT).show();
                 break;
         }
@@ -216,11 +262,29 @@ public class AdditionActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),"6",Toast.LENGTH_SHORT).show();
                 iYellowdicenumber=6;
                 break;
+            case 7:
+                //tYellowTextView.setText("6");
+                iYellowDice.setImageResource(R.drawable.yellowdice7);
+                //Toast.makeText(getApplicationContext(),"6",Toast.LENGTH_SHORT).show();
+                iYellowdicenumber=7;
+                break;
+            case 8:
+                //tYellowTextView.setText("6");
+                iYellowDice.setImageResource(R.drawable.yellowdice8);
+                //Toast.makeText(getApplicationContext(),"6",Toast.LENGTH_SHORT).show();
+                iYellowdicenumber=8;
+                break;
+            case 9:
+                //tYellowTextView.setText("6");
+                iYellowDice.setImageResource(R.drawable.yellowdice9);
+                //Toast.makeText(getApplicationContext(),"6",Toast.LENGTH_SHORT).show();
+                iYellowdicenumber=9;
+                break;
         }
 
-        bRollButton.setEnabled(false);
-        bCheckAnswer.setEnabled(true);
-        iQ++;
+        bRollButton.setVisibility(View.INVISIBLE);
+        bCheckAnswer.setVisibility(View.VISIBLE);
+
     }
 
     public void addnumber(View v) {
@@ -247,10 +311,11 @@ public class AdditionActivity extends AppCompatActivity {
             } else {
                 tAnsTextView.setText("Wrong Answer");
             }
-            bRollButton.setEnabled(true);
+            bRollButton.setVisibility(View.VISIBLE);
             eResultNumber.setEnabled(false);
-            bCheckAnswer.setEnabled(false);
-            bEndGame.setEnabled(true);
+            bCheckAnswer.setVisibility(View.INVISIBLE);
+            bEndGame.setVisibility(View.VISIBLE);
+
         }
 
     }
