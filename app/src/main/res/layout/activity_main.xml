@@ -5,26 +5,26 @@
     android:id="@+id/MainMenu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/editedrolldice"
-    tools:context=".MainActivity">
+    android:background="@drawable/bgwithdice"
+    tools:context="in.focusminds.diceroll.MainActivity">
 
     <Button
         android:id="@+id/addition"
-        android:layout_width="71dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/plus"
+        android:layout_width="70dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/pluse"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/subtraction"
-        android:layout_width="71dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/minus1"
+        android:layout_width="70dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/minus"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -32,19 +32,19 @@
         android:id="@+id/instruction"
         android:layout_width="70dp"
         android:layout_height="75dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/instruction"
+        android:background="@drawable/qustmark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/about"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/roundlogo"
+        android:layout_width="70dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
