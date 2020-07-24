@@ -1,4 +1,4 @@
-package in.focusminds.diceroll;
+package in.focusminds.integerfun;
 
 import org.junit.Test;
 

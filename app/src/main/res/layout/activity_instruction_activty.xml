@@ -5,37 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context="in.focusminds.diceroll.InstructionActivty">
+    tools:context="in.focusminds.integerfun.InstructionActivty">
 
     <ImageView
         android:id="@+id/Gdice"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Ydice"
-        app:srcCompat="@drawable/g1" />
+        app:srcCompat="@drawable/dice23" />
 
     <ImageView
         android:id="@+id/Rdice"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/r1" />
+        app:srcCompat="@drawable/dice3" />
 
     <ImageView
         android:id="@+id/Ydice"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Rdice"
-        app:srcCompat="@drawable/y1" />
+        app:srcCompat="@drawable/dice13" />
 
     <TextView
         android:id="@+id/GText"
@@ -89,6 +89,8 @@
         android:id="@+id/divider2"
         android:layout_width="1dp"
         android:layout_height="729dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,7 +103,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="@+id/divider2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pluse" />
 
@@ -110,13 +112,11 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:text="Click to start Addition game."
         android:textAlignment="center"
         android:textColor="#6C0FCA"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="@+id/horizontaldivider"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
@@ -125,8 +125,8 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintStart_toStartOf="@+id/divider2"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:srcCompat="@drawable/minus" />
 
@@ -135,13 +135,11 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="Click to start Subtaction game."
+        android:text="Click to start Subtraction game."
         android:textAlignment="center"
         android:textColor="#6C0FCA"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
@@ -151,7 +149,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="@+id/divider2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:srcCompat="@drawable/eachrolldice" />
 
@@ -160,12 +158,10 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginStart="5dp"
-        android:layout_marginEnd="10dp"
         android:text="Click dice to Roll each time."
         android:textColor="#6C0FCA"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
