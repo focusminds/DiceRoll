@@ -5,8 +5,8 @@
     android:id="@+id/MainMenu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgwithdice"
-    tools:context="in.focusminds.integerfun.MainActivity">
+    android:background="@drawable/home"
+    tools:context="in.focusminds.diceroll.MainActivity">
 
     <Button
         android:id="@+id/addition"

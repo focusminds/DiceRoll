@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="in.focusminds.integerfun">
+    package="in.focusminds.diceroll">
 
     <application
         android:allowBackup="true"
@@ -8,29 +8,33 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
         android:theme="@style/AppTheme">
-        <activity android:name="in.focusminds.integerfun.AboutActivity"
-            android:parentActivityName="in.focusminds.integerfun.MainActivity"
-            android:screenOrientation="portrait"
-            android:label="About">
-
-        </activity>
         <activity
+            android:name="in.focusminds.diceroll.LevelSelection"
+            android:screenOrientation="portrait"
+            android:parentActivityName="in.focusminds.diceroll.MainActivity"
+            android:theme="@style/AppTheme.Noactionbar"
+           />
+        <activity
+            android:name="in.focusminds.diceroll.AboutActivity"
+            android:label="About"
+            android:parentActivityName="in.focusminds.diceroll.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="in.focusminds.diceroll.InstructionActivty"
             android:label="Instruction"
-            android:name="in.focusminds.integerfun.InstructionActivty"
-            android:screenOrientation="portrait"
-            android:parentActivityName="in.focusminds.integerfun.MainActivity" />
+            android:parentActivityName="in.focusminds.diceroll.MainActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="in.focusminds.integerfun.MainActivity"
+            android:name="in.focusminds.diceroll.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Noactionbar" />
         <activity
-            android:name="in.focusminds.integerfun.AdditionActivity"
-            android:screenOrientation="portrait"
-            android:parentActivityName="in.focusminds.integerfun.MainActivity" />
+            android:name="in.focusminds.diceroll.AdditionActivity"
+
+            android:screenOrientation="portrait" />
         <activity
-            android:name="in.focusminds.integerfun.LogoScreen"
+            android:name="in.focusminds.diceroll.LogoScreen"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Noactionbar">
             <intent-filter>
